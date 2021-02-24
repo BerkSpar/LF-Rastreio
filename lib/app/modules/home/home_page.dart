@@ -14,11 +14,11 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
       appBar: AppBar(
         title: Text('FL Rastreio'),
       ),
-      body: ListView.builder(
-        itemBuilder: (_, index) {
-          return Container();
-        },
-      ),
+      // body: ListView.builder(
+      //   itemBuilder: (_, index) {
+      //     return Container();
+      //   },
+      // ),
     );
   }
 }
