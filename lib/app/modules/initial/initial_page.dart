@@ -10,6 +10,12 @@ class InitialPage extends StatefulWidget {
 
 class _InitialPageState extends ModularState<InitialPage, InitialController> {
   @override
+  void initState() {
+    controller.init();
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
