@@ -15,6 +15,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.40.6"
+  argon_buttons_flutter:
+    dependency: "direct main"
+    description:
+      name: argon_buttons_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.6"
   args:
     dependency: transitive
     description:
@@ -22,6 +29,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.6.0"
+  asuka:
+    dependency: "direct main"
+    description:
+      name: asuka
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.4"
   async:
     dependency: transitive
     description:
@@ -209,6 +223,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.1"
+  flutter_spinkit:
+    dependency: "direct main"
+    description:
+      name: flutter_spinkit
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.1.2+1"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -508,3 +529,4 @@ packages:
     version: "2.2.1"
 sdks:
   dart: ">=2.10.0 <2.11.0"
+  flutter: ">=0.1.4 <2.0.0"

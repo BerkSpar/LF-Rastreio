@@ -18,6 +18,9 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  argon_buttons_flutter: ^1.0.6
+  flutter_spinkit: ^4.1.2+1  
+  asuka: ^1.0.4
   dio: ^3.0.10
   flutter_mobx: ^1.1.0+2
   mobx: ^1.2.1+4
@@ -36,5 +39,5 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  # assets:
-  #   - assets/images/
+  assets:
+    - assets/images/
