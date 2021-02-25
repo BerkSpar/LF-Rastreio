@@ -12,7 +12,14 @@ abstract class _LoginControllerBase with Store {
   TextEditingController passwordCtrl = TextEditingController();
 
   @action
-  login(startLoading, stopLoading, btnState) {}
+  login(startLoading, stopLoading, btnState) async {
+    startLoading();
+    //get token and validation
+    await Future.delayed(Duration(seconds: 2));
+    stopLoading();
+
+    Modular.to.pushReplacementNamed('/home');
+  }
 
   @action
   createAccount() {}

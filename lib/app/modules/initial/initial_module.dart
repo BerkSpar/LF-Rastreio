@@ -1,5 +1,5 @@
+import 'package:fl_rastreio/app/modules/home/home_module.dart';
 import 'package:fl_rastreio/app/modules/initial/pages/login/login_page.dart';
-
 import 'pages/login/login_controller.dart';
 import 'initial_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -17,6 +17,7 @@ class InitialModule extends ChildModule {
   List<ModularRouter> get routers => [
         ModularRouter(Modular.initialRoute, child: (_, args) => InitialPage()),
         ModularRouter('/login', child: (_, args) => LoginPage()),
+        ModularRouter('/home', module: HomeModule()),
       ];
 
   static Inject get to => Inject<InitialModule>.of();

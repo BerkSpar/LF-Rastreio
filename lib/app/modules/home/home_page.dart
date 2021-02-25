@@ -1,3 +1,4 @@
+import 'package:fl_rastreio/app/widgets/vehicle_card/vehicle_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'home_controller.dart';
@@ -12,13 +13,19 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('FL Rastreio'),
+        title: Text('LF Rastreio'),
+        centerTitle: true,
       ),
-      // body: ListView.builder(
-      //   itemBuilder: (_, index) {
-      //     return Container();
-      //   },
-      // ),
+      body: ListView.separated(
+        padding: EdgeInsets.fromLTRB(16, 24, 16, 0),
+        separatorBuilder: (_, index) {
+          return SizedBox(height: 8);
+        },
+        itemCount: 10,
+        itemBuilder: (_, index) {
+          return VehicleCardWidget();
+        },
+      ),
     );
   }
 }

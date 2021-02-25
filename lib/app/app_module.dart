@@ -1,3 +1,4 @@
+import 'widgets/vehicle_card/vehicle_card_controller.dart';
 import 'package:fl_rastreio/app/modules/initial/initial_module.dart';
 import 'app_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -7,6 +8,7 @@ import 'package:fl_rastreio/app/app_widget.dart';
 class AppModule extends MainModule {
   @override
   List<Bind> get binds => [
+        $VehicleCardController,
         $AppController,
       ];
 
