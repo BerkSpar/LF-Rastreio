@@ -17,14 +17,10 @@ class LfRastreioApiRepository extends Disposable {
 
   Future<bool> signIn(String username, String password) async {
     try {
-      print('$username $password');
-
       final response = await client.post('/auth/token/', data: {
         "username": username,
         "password": password,
       });
-
-      print(response.data);
 
       options.headers['Authorization'] = 'Token ${response.data['token']}';
 
