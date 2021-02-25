@@ -1,3 +1,4 @@
+import 'package:fl_rastreio/app/widgets/vehicle_bottom/vehicle_bottom_widget.dart';
 import 'package:fl_rastreio/app/widgets/vehicle_card/vehicle_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
@@ -36,6 +37,17 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
 
               return VehicleCardWidget(
                 vehicle: vehicle,
+                onTap: () => showModalBottomSheet(
+                  context: context,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(32),
+                  ),
+                  builder: (_) {
+                    return VehicleBottomWidget(
+                      vehicle: vehicle,
+                    );
+                  },
+                ),
               );
             },
           );

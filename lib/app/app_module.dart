@@ -1,3 +1,4 @@
+import 'widgets/vehicle_bottom/vehicle_bottom_controller.dart';
 import 'shared/repositories/lf_rastreio_api_repository.dart';
 import 'widgets/vehicle_card/vehicle_card_controller.dart';
 import 'package:fl_rastreio/app/modules/initial/initial_module.dart';
@@ -9,10 +10,10 @@ import 'package:fl_rastreio/app/app_widget.dart';
 class AppModule extends MainModule {
   @override
   List<Bind> get binds => [
+        $VehicleBottomController,
         $LfRastreioApiRepository,
         $VehicleCardController,
         $AppController,
-        Bind((i) => LfRastreioApiRepository()),
       ];
 
   @override
