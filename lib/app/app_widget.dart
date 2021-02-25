@@ -8,7 +8,8 @@ class AppWidget extends StatelessWidget {
       navigatorKey: Modular.navigatorKey,
       title: 'FL Rastreio',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
+        scaffoldBackgroundColor: Colors.amberAccent,
       ),
       initialRoute: '/',
       onGenerateRoute: Modular.generateRoute,

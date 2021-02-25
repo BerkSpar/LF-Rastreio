@@ -1,5 +1,4 @@
 import 'package:argon_buttons_flutter/argon_buttons_flutter.dart';
-import 'package:fl_rastreio/app/shared/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -18,7 +17,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: LFColors.darkBlue,
+        color: Theme.of(context).accentColor,
         child: Column(
           children: [
             SizedBox(height: 32),
@@ -29,7 +28,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
                   Text(
                     'LF Rastreio',
                     style: TextStyle(
-                      color: LFColors.white,
+                      color: Colors.white,
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
                     ),
@@ -39,7 +38,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
                     'Mantenha a segurança do veículo na palma da sua mão! A LF Tecnologia te protege a todo momento!',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: LFColors.white,
+                      color: Colors.white,
                       fontSize: 18,
                     ),
                   ),
@@ -50,7 +49,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
             Expanded(
               child: Container(
                 decoration: BoxDecoration(
-                  color: LFColors.white,
+                  color: Colors.white,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(30),
                     topRight: Radius.circular(30),
@@ -64,7 +63,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w700,
-                        color: LFColors.darkBlue,
+                        color: Colors.purple,
                       ),
                     ),
                     SizedBox(height: 24),
@@ -115,7 +114,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
                         height: 48,
                         width: double.maxFinite,
                         borderRadius: 8,
-                        color: LFColors.darkBlue,
+                        color: Colors.amber,
                         onTap: controller.login,
                         elevation: 0,
                         loader: SpinKitFadingCircle(
@@ -126,7 +125,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
                           'Entrar',
                           style: TextStyle(
                             fontSize: 16,
-                            color: LFColors.white,
+                            color: Colors.black87,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
