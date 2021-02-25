@@ -24,6 +24,19 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
       appBar: AppBar(
         title: Text('LF Rastreio'),
         centerTitle: true,
+        actions: [
+          PopupMenuButton<String>(
+            onSelected: controller.about,
+            itemBuilder: (BuildContext context) {
+              return controller.urls.map((Map url) {
+                return PopupMenuItem<String>(
+                  value: url['link'],
+                  child: Text(url['description']),
+                );
+              }).toList();
+            },
+          )
+        ],
       ),
       body: Observer(
         builder: (context) {
