@@ -19,7 +19,7 @@ class _InitialPageState extends ModularState<InitialPage, InitialController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: LFColors.black,
+      backgroundColor: Colors.black,
       body: Center(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16),
@@ -29,7 +29,7 @@ class _InitialPageState extends ModularState<InitialPage, InitialController> {
               Image.asset('assets/images/lf-logo.png'),
               SizedBox(height: 16),
               SpinKitWave(
-                color: LFColors.lightBlue,
+                color: LFColors.white,
                 size: 24.0,
               ),
             ],
