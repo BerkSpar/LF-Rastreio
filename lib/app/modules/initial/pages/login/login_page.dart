@@ -63,7 +63,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w700,
-                        color: Colors.purple,
+                        color: Theme.of(context).accentColor,
                       ),
                     ),
                     SizedBox(height: 24),
