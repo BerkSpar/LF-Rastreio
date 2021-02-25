@@ -1,6 +1,13 @@
+import 'package:fl_rastreio/app/shared/models/vehicle.dart';
 import 'package:flutter/material.dart';
 
 class VehicleCardWidget extends StatelessWidget {
+  final Vehicle vehicle;
+
+  VehicleCardWidget({
+    @required this.vehicle,
+  });
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,7 +34,7 @@ class VehicleCardWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Honda Civic',
+                  vehicle.name,
                   style: TextStyle(
                     color: Colors.white.withOpacity(0.9),
                     fontSize: 18,
@@ -36,7 +43,7 @@ class VehicleCardWidget extends StatelessWidget {
                 ),
                 SizedBox(height: 8),
                 Text(
-                  'Curitiba/PR',
+                  vehicle.lastPosition.address,
                   style: TextStyle(
                     color: Colors.white.withOpacity(0.7),
                     fontSize: 14,

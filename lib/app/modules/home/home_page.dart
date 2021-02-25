@@ -21,9 +21,13 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
         separatorBuilder: (_, index) {
           return SizedBox(height: 8);
         },
-        itemCount: 10,
+        itemCount: controller.vehicles.length,
         itemBuilder: (_, index) {
-          return VehicleCardWidget();
+          final vehicle = controller.vehicles[index];
+
+          return VehicleCardWidget(
+            vehicle: vehicle,
+          );
         },
       ),
     );
