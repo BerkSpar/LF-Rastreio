@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:fl_rastreio/app/shared/models/vehicle.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 part 'lf_rastreio_api_repository.g.dart';
@@ -28,6 +29,22 @@ class LfRastreioApiRepository extends Disposable {
     } catch (e) {
       return false;
     }
+  }
+
+  Future<List<Vehicle>> getVehicles() async {
+    // try {
+    final response = await client.get('/vehicles');
+
+    List<Vehicle> vehicles = <Vehicle>[];
+
+    response.data.forEach((json) {
+      vehicles.add(Vehicle.fromJson(json));
+    });
+
+    return vehicles;
+    // } catch (e) {
+    //   return <Vehicle>[];
+    // }
   }
 
   @override
