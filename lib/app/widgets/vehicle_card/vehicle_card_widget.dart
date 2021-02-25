@@ -8,6 +8,26 @@ class VehicleCardWidget extends StatelessWidget {
     @required this.vehicle,
   });
 
+  Color _getColorFromType() {
+    switch (vehicle.type) {
+      case 'C':
+        return Colors.cyan;
+        break;
+      case 'M':
+        return Colors.yellow;
+        break;
+      case 'T':
+        return Colors.purple;
+        break;
+      case 'B':
+        return Colors.blue;
+        break;
+      default:
+        return Colors.red;
+        break;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,7 +43,7 @@ class VehicleCardWidget extends StatelessWidget {
             height: 48,
             width: 4,
             decoration: BoxDecoration(
-              color: Colors.yellow,
+              color: _getColorFromType(),
               borderRadius: BorderRadius.circular(8),
             ),
           ),
@@ -44,6 +64,8 @@ class VehicleCardWidget extends StatelessWidget {
                 SizedBox(height: 8),
                 Text(
                   vehicle.lastPosition.address,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     color: Colors.white.withOpacity(0.7),
                     fontSize: 14,
