@@ -1,3 +1,4 @@
+import 'package:fl_rastreio/app/shared/utils/lf_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -18,7 +19,7 @@ class _InitialPageState extends ModularState<InitialPage, InitialController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).accentColor,
+      backgroundColor: LfColors.blue,
       body: Center(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16),

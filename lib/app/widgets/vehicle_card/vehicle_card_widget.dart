@@ -1,4 +1,5 @@
 import 'package:fl_rastreio/app/shared/models/vehicle.dart';
+import 'package:fl_rastreio/app/shared/utils/lf_colors.dart';
 import 'package:flutter/material.dart';
 
 class VehicleCardWidget extends StatelessWidget {
@@ -13,19 +14,19 @@ class VehicleCardWidget extends StatelessWidget {
   Color _getColorFromType() {
     switch (vehicle.type) {
       case 'C':
-        return Colors.cyan;
+        return LfColors.blue;
         break;
       case 'M':
-        return Colors.yellow;
+        return LfColors.orange;
         break;
       case 'T':
-        return Colors.purple;
+        return LfColors.cyan;
         break;
       case 'B':
-        return Colors.blue;
+        return LfColors.purple;
         break;
       default:
-        return Colors.red;
+        return LfColors.pink;
         break;
     }
   }
@@ -37,7 +38,7 @@ class VehicleCardWidget extends StatelessWidget {
       child: Container(
         height: 72,
         decoration: BoxDecoration(
-          color: Colors.black87,
+          color: LfColors.black,
           borderRadius: BorderRadius.circular(8),
         ),
         child: Row(
@@ -60,7 +61,7 @@ class VehicleCardWidget extends StatelessWidget {
                   Text(
                     vehicle.name,
                     style: TextStyle(
-                      color: Colors.white.withOpacity(0.9),
+                      color: LfColors.orange.withOpacity(0.9),
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
