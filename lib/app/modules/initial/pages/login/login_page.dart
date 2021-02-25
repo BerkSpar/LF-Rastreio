@@ -56,82 +56,87 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
                   ),
                 ),
                 padding: EdgeInsets.fromLTRB(32, 32, 32, 0),
-                child: Column(
-                  children: [
-                    Text(
-                      'Entre agora para continuar',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w700,
-                        color: Theme.of(context).accentColor,
-                      ),
-                    ),
-                    SizedBox(height: 24),
-                    TextFormField(
-                      controller: controller.usernameCtrl,
-                      decoration: InputDecoration(
-                        hintText: 'Usuário',
-                        filled: true,
-                        prefixIcon: Icon(Icons.person),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                      ),
-                      validator: (value) {
-                        if (value.isEmpty) {
-                          return 'Você precisa colocar um usuário';
-                        }
-
-                        return null;
-                      },
-                    ),
-                    SizedBox(height: 8),
-                    TextFormField(
-                      controller: controller.passwordCtrl,
-                      obscureText: true,
-                      keyboardType: TextInputType.visiblePassword,
-                      decoration: InputDecoration(
-                        hintText: 'Senha',
-                        filled: true,
-                        prefixIcon: Icon(Icons.lock),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                      ),
-                      validator: (value) {
-                        if (value.isEmpty) {
-                          return 'Você precisa colocar uma senha';
-                        }
-
-                        return null;
-                      },
-                    ),
-                    SizedBox(height: 24),
-                    Container(
-                      height: 48,
-                      width: double.maxFinite,
-                      child: ArgonButton(
-                        height: 48,
-                        width: double.maxFinite,
-                        borderRadius: 8,
-                        color: Colors.amber,
-                        onTap: controller.login,
-                        elevation: 0,
-                        loader: SpinKitFadingCircle(
-                          color: Colors.white,
-                          size: 24,
-                        ),
-                        child: Text(
-                          'Entrar',
+                child: SingleChildScrollView(
+                  child: Form(
+                    key: controller.formKey,
+                    child: Column(
+                      children: [
+                        Text(
+                          'Entre agora para continuar',
                           style: TextStyle(
                             fontSize: 16,
-                            color: Colors.black87,
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.w700,
+                            color: Theme.of(context).accentColor,
                           ),
                         ),
-                      ),
+                        SizedBox(height: 24),
+                        TextFormField(
+                          controller: controller.usernameCtrl,
+                          decoration: InputDecoration(
+                            hintText: 'Usuário',
+                            filled: true,
+                            prefixIcon: Icon(Icons.person),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ),
+                          validator: (value) {
+                            if (value.isEmpty) {
+                              return 'Você precisa colocar um usuário';
+                            }
+
+                            return null;
+                          },
+                        ),
+                        SizedBox(height: 8),
+                        TextFormField(
+                          controller: controller.passwordCtrl,
+                          obscureText: true,
+                          keyboardType: TextInputType.visiblePassword,
+                          decoration: InputDecoration(
+                            hintText: 'Senha',
+                            filled: true,
+                            prefixIcon: Icon(Icons.lock),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ),
+                          validator: (value) {
+                            if (value.isEmpty) {
+                              return 'Você precisa colocar uma senha';
+                            }
+
+                            return null;
+                          },
+                        ),
+                        SizedBox(height: 24),
+                        Container(
+                          height: 48,
+                          width: double.maxFinite,
+                          child: ArgonButton(
+                            height: 48,
+                            width: double.maxFinite,
+                            borderRadius: 8,
+                            color: Colors.amber,
+                            onTap: controller.login,
+                            elevation: 0,
+                            loader: SpinKitFadingCircle(
+                              color: Colors.white,
+                              size: 24,
+                            ),
+                            child: Text(
+                              'Entrar',
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.black87,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
+                  ),
                 ),
               ),
             ),
