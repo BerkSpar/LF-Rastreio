@@ -32,19 +32,19 @@ class LfRastreioApiRepository extends Disposable {
   }
 
   Future<List<Vehicle>> getVehicles() async {
-    // try {
-    final response = await client.get('/vehicles');
+    try {
+      final response = await client.get('/vehicles');
 
-    List<Vehicle> vehicles = <Vehicle>[];
+      List<Vehicle> vehicles = <Vehicle>[];
 
-    response.data.forEach((json) {
-      vehicles.add(Vehicle.fromJson(json));
-    });
+      response.data.forEach((json) {
+        vehicles.add(Vehicle.fromJson(json));
+      });
 
-    return vehicles;
-    // } catch (e) {
-    //   return <Vehicle>[];
-    // }
+      return vehicles;
+    } catch (e) {
+      return <Vehicle>[];
+    }
   }
 
   @override
